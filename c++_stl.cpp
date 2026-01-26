@@ -32,5 +32,19 @@ int main() {
 
     vector<int>::iterator j=v.end(); // This will not point to the last element, but one past the last element
 
+    for(auto it=v.begin(); it != v.end(); it++) {
+        cout << *(it) << " ";
+    }
+    cout << "\n";
+
+    v.erase(v.begin()+1); // Erase second element
+    v.erase(v.begin()+2, v.begin()+4); // Erase from index 2 to 3
+
+    v.insert(v.begin()+1,100); // Insert 100 at index 1 
+    v.insert(v.begin()+2,3,100); // Insert three 100s starting at index 2
+    v.clear(); // Clear the vector
+
+    
+
     return 0;
 }
