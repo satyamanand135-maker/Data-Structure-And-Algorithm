@@ -44,7 +44,16 @@ int main() {
     v.insert(v.begin()+2,3,100); // Insert three 100s starting at index 2
     v.clear(); // Clear the vector
 
-    
+    //Stacks
+    stack<int> s;
+    s.push(1);
+    s.emplace(2); //It is faster than push
+    cout << "Stack Top: " << s.top() << "\n"; // Outputs 2 as it is LIFO so the last in is the first out.
+    s.pop();
+    cout << "Stack Size: " << s.size() << "\n"; // Outputs 1 as the pop operation removed one element which was 2 as it is LIFO.
 
-    return 0;
+    stack<int>s2;
+    s2.swap(s); // Swaps contents of stack s2 and s
+    //Time Complexity: O(1)
+        return 0;
 }
