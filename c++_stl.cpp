@@ -55,5 +55,23 @@ int main() {
     stack<int>s2;
     s2.swap(s); // Swaps contents of stack s2 and s
     //Time Complexity: O(1)
+
+
+    //Queues
+    //Queue follows FIFO(First In First Out) principle
+    queue<int> q;
+    q.push(1); //{1}
+    q.emplace(2); //It is faster than push {1,2}
+    q.push(2); //{1,2,2}
+    cout << "Queue Front: " << q.front() << "\n"; // Outputs 1
+    cout << "Queue Back: " << q.back() << "\n"; // Outputs 2
+    q.pop(); //Removes 1 from the queue {2,2}
+    cout << "Queue Size: " << q.size() << "\n"; // Outputs 2
+    q.back()+=5; //Adds 5 to the last element   
+    queue<int>q2;
+    q2.swap(q); // Swaps contents of queue q2 and q
+    //Time Complexity: O(1)
+
+
         return 0;
 }
