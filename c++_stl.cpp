@@ -79,6 +79,38 @@ int main() {
     pq.emplace(10); //It is faster than push {10,5}
     pq.push(3); //{10,5,3}
 
+    priority_queue<int, vector<int>, greater<int>> pq_min; //Min-Heap
+    pq_min.push(5); //{5}
+    pq_min.emplace(10); //It is faster than push {5,10}
+    pq_min.push(3); //{3,5,10}
+
+    //Sets
+    set<int> st;
+    //Only unique elements are stored in a set
+    st.insert(5);
+    st.emplace(3); //It is faster than insert
+    st.insert(8);
+    st.insert(5); // Duplicate, will not be added
+    cout << "Set Elements: ";
+    for (auto it = st.begin(); it != st.end(); it++) {  
+        cout << *it << " "; // Outputs 3 5 8
+    }
+    cout << "\n";
+    cout << "Set Size: " << st.size() << "\n"; // Outputs 3
+    st.erase(3); // Removes element 3
+    cout << "Set Size after erasing 3: " << st.size() << "\n"; // Outputs 2
+    auto it = st.find(5); // Returns iterator to element 5
+    if (it != st.end()) {
+        cout << "Element 5 found in set\n";
+    } else {
+        cout << "Element 5 not found in set\n";
+    }
+    //Time Complexity: O(log n) for insert, erase, find operations
+
+
+    
+
+
 
         return 0;
 }
