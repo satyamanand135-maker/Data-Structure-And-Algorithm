@@ -72,6 +72,13 @@ int main() {
     q2.swap(q); // Swaps contents of queue q2 and q
     //Time Complexity: O(1)
 
+    //Proirity Queues
+    // What does it do is to make the list like a max-heap
+    priority_queue<int> pq; //Max-Heap
+    pq.push(5); //{5}
+    pq.emplace(10); //It is faster than push {10,5}
+    pq.push(3); //{10,5,3}
+
 
         return 0;
 }
